@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>llm_robot</name>
+  <version>0.0.1</version>
+  <description>LLM applied to mobile robotics (Level 1 simulation)</description>
+
+  <maintainer email="you@email.com">Jessyca</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
+</package>
+
