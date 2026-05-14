@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="jetson_nano_base" params="parent_link xyz rpy">
+        
+        <joint name="jetson_nano_joint" type="fixed">
+            <parent link="${parent_link}"/>
+            <child link="jetson_nano_link"/>
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+        </joint>
+
+        <link name="jetson_nano_link">
+            <visual>
+                <origin xyz="0 0 0.005" rpy="0 0 0"/>
+                <geometry>
+                    <box size="0.10 0.08 0.01"/>
+                </geometry>
+                <material name="green">
+                    <color rgba="0 0.5 0 1"/>
+                </material>
+            </visual>
+            <visual>
+                <origin xyz="0.02 0 0.03" rpy="0 0 0"/>
+                <geometry>
+                    <box size="0.06 0.06 0.04"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0.02" rpy="0 0 0"/>
+                <geometry>
+                    <box size="0.10 0.08 0.04"/>
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+</robot>

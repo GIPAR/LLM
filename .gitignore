@@ -1,0 +1,4 @@
+# Ignorar arquivos de compilação do ROS 2 da Mini Nara
+mini_nara_ws/build/
+mini_nara_ws/install/
+mini_nara_ws/log/
